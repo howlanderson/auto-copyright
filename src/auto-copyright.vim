@@ -1,5 +1,6 @@
 function AutoCopyright()
     let l:base_line = line(".") - 1
+    let l:copyright_years = "2011 ~ 2012"
     let l:company = "Deepin, Inc."
     let l:author = "Wang Yong"
     let l:author_email = "wangyong@gmail.com"
@@ -7,8 +8,8 @@ function AutoCopyright()
     let l:maintainer_email = "wangyong@gmail.com"
     let l:gpl_version = "4"
 
-    call append(base_line + 0 ,"# Copyright (C) 2011 ~ 2012 " . l:company)
-    call append(base_line + 1 ,"#               2011 ~ 2012 " . l:author)
+    call append(base_line + 0 ,"# Copyright (C) " . l:copyright_years . " " . l:company)
+    call append(base_line + 1 ,"#               " . l:copyright_years . " " . l:author)
     call append(base_line + 2 ,"#")
     call append(base_line + 3 ,"# Author: " . l:author . " <" . l:author_email . ">")
     call append(base_line + 4 ,"# Maintainer: " . l:maintainer . " <" . l:maintainer_email . ">")
